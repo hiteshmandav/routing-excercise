@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="banner">
+    <h1>Admin</h1>
+  </div>
+
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle [routerLink]="['add-user']">Add user</mat-button-toggle>
+    <mat-button-toggle [routerLink]="['add-product']">Add Product</mat-button-toggle>
+    <mat-button-toggle [routerLink]="['view-product']">View products</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <router-outlet></router-outlet>
+</div>
