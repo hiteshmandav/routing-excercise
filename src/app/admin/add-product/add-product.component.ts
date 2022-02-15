@@ -1,3 +1,4 @@
+import { FormSaveData } from './../../guards/form-save-data';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -6,9 +7,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.scss']
 })
-export class AddProductComponent implements OnInit {
+export class AddProductComponent implements OnInit,FormSaveData {
   public addProductForm: FormGroup;
   constructor(private fb: FormBuilder) { }
+
 
   ngOnInit(): void {
     this.addProductForm = this.fb.group({
@@ -19,6 +21,9 @@ export class AddProductComponent implements OnInit {
 
   clearForm() {
     this.addProductForm.reset();
+  }
+  isFormDataSaved(): boolean {
+    return this.addProductForm.dirty
   }
 
 }
