@@ -1,14 +1,14 @@
 <div class="container">
-  <h3>Add User</h3>
+  <h3>Add New Product</h3>
 
-  <form class="example-form">
+  <form class="example-form" [formGroup]="addProductForm">
     <mat-form-field class="example-full-width" appearance="fill">
-      <input matInput placeholder="product name" value="">
+      <input matInput placeholder="product name" formControlName='name'>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-      <input matInput placeholder="product Quantity" value="">
+      <input matInput placeholder="product Quantity" formControlName='quantity' type="number">
     </mat-form-field>
 
-    <button mat-flat-button color="primary">Add product</button>
+    <button mat-flat-button color="primary" (click)="clearForm()">Add product</button>
   </form>
 </div>

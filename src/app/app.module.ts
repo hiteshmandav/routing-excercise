@@ -22,9 +22,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotAuthorizedComponent } from './admin/not-authorized/not-authorized.component';
 import {MatCardModule} from '@angular/material/card';
+import { ConfirmDialigComponent } from './confirm-dialig/confirm-dialig.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {MatCardModule} from '@angular/material/card';
     AddUserComponent,
     AddProductComponent,
     ViewProductComponent,
-    NotAuthorizedComponent
+    NotAuthorizedComponent,
+    ConfirmDialigComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSortModule,
     MatSlideToggleModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

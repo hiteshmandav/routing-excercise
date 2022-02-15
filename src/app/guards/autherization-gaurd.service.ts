@@ -13,7 +13,7 @@ export class AutherizationGaurdService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
     boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree>
   {
-    console.log('Autherization gaurd checked...')
+    console.log('Autherization gaurd checking...')
     return this.mockService.getLoggedInStatus().pipe(map(value => {
       if (value) {
         console.log('Autherization passed...')

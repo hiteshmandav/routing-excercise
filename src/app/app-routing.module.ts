@@ -1,3 +1,4 @@
+import { FormsGuardService } from './guards/forms-guard.service';
 import { NotAuthorizedComponent } from './admin/not-authorized/not-authorized.component';
 import { PermisionGaurdService } from './guards/permision-gaurd.service';
 import { AutherizationGaurdService } from './guards/autherization-gaurd.service';
@@ -7,7 +8,7 @@ import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanDeactivate } from '@angular/router';
 
 
 const routes: Routes = [
@@ -30,7 +31,8 @@ const routes: Routes = [
           },
           {
             path: 'add-product',
-            component: AddProductComponent
+            component: AddProductComponent,
+            canDeactivate: [FormsGuardService],
           },
         ]
       },

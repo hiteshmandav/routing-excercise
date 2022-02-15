@@ -13,7 +13,7 @@ export class PermisionGaurdService implements CanActivateChild{
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot):
     boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree>
   {
-    console.log('Permision gaurd checked...')
+    console.log('Permision gaurd checking...')
     return this.mockService.getsAutherizedToAddStatus().pipe(map(value => {
       if (value) {
         console.log('Permision passed...')
