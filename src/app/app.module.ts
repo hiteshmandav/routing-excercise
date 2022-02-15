@@ -1,3 +1,4 @@
+import { AdminModule } from './admin/admin.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,19 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { AddUserComponent } from './admin/add-user/add-user.component';
-import { AddProductComponent } from './admin/add-product/add-product.component';
-import { ViewProductComponent } from './admin/view-product/view-product.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NotAuthorizedComponent } from './admin/not-authorized/not-authorized.component';
-import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';;
 import { ConfirmDialigComponent } from './confirm-dialig/confirm-dialig.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -33,11 +23,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppComponent,
     AppbarComponent,
     HomeComponent,
-    AdminComponent,
-    AddUserComponent,
-    AddProductComponent,
-    ViewProductComponent,
-    NotAuthorizedComponent,
     ConfirmDialigComponent
   ],
   imports: [
@@ -49,17 +34,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
-    MatButtonToggleModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
     MatSlideToggleModule,
+    MatDialogModule,
     FormsModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    MatDialogModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

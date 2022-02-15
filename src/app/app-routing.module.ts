@@ -18,33 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminComponent,
+    loadChildren: () => import('./admin/admin-routing.module').then(m=> m.AdminRoutingModule),
     canActivate: [AutherizationGaurdService],
-    children: [
-      {
-        path: '',
-        canActivateChild: [PermisionGaurdService],
-        children: [
-          {
-            path: 'add-user',
-            component: AddUserComponent
-          },
-          {
-            path: 'add-product',
-            component: AddProductComponent,
-            canDeactivate: [FormsGuardService],
-          },
-        ]
-      },
-      {
-        path: 'view-product',
-        component: ViewProductComponent
-      },
-      {
-        path: 'not-autherized',
-        component: NotAuthorizedComponent
-      }
-    ]
   },
   {
     path: '',
