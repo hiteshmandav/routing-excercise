@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin-routing.module').then(m=> m.AdminRoutingModule),
-    canActivate: [AutherizationGaurdService],
+    canLoad: [AutherizationGaurdService],
   },
   {
     path: '',
